@@ -19,7 +19,9 @@ export class Table extends ExcelComponent {
   }
 
   onMousedown(event) {
-    console.log('mousedown', event.target)
+    if (event.target.dataset.resize) {
+      console.log('Start resizing', event.target.dataset.resize)
+    }
   }
 
   onMousemove() {
